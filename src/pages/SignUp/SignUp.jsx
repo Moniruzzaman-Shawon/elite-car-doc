@@ -2,11 +2,10 @@ import React from 'react';
 import img from '../../assets/images/login/login.svg';
 import { Link } from 'react-router-dom';
 
-const Login = () => {
-    const handleLogin = event => {
+const SignUp = () => {
+    const handleSignUp = event => {
         event.preventDefault();
     }
-
     return (
         <div className="hero bg-base-200 min-h-screen">
             <div className="hero-content flex-col lg:flex-row">
@@ -16,7 +15,13 @@ const Login = () => {
                 <div className="card bg-base-100 w-full max-w-sm shrink-0 shadow-2xl">
                     <form className="card-body">
                         <h1 className="text-3xl text-center font-bold">Login</h1>
-                        <form onSubmit={handleLogin}>
+                        <form onSubmit={handleSignUp}>
+                            <div className="form-control">
+                                <label className="label">
+                                    <span className="label-text">Name</span>
+                                </label>
+                                <input type="name" name='name' placeholder="name" className="input input-bordered" required />
+                            </div>
                             <div className="form-control">
                                 <label className="label">
                                     <span className="label-text">Email</span>
@@ -28,15 +33,19 @@ const Login = () => {
                                     <span className="label-text">Password</span>
                                 </label>
                                 <input type="password" name='password' placeholder="password" className="input input-bordered" required />
+                            </div>
+                            <div className="form-control">
                                 <label className="label">
-                                    <a href="#" className="label-text-alt link link-hover">Forgot password?</a>
+                                    <span className="label-text">Confirm Password</span>
                                 </label>
+                                <input type="password" name='password' placeholder="confirm password" className="input input-bordered" required />
+
                             </div>
                             <div className="form-control mt-6">
 
-                                <input className="btn btn-error" type=" submit" value="Login" />
+                                <input className="btn btn-error" type=" submit" value="Sign up" />
                             </div>
-                            <p className='mt-5'>New to Car Doctor? <Link className='text-orange-300 font-bold' to='/signup'>Sign Up</Link></p>
+                            <p className='mt-5'>Already have an account? <Link className='text-orange-300 font-bold' to='/login'>Login</Link></p>
                         </form>
                     </form>
                 </div>
@@ -45,4 +54,4 @@ const Login = () => {
     );
 };
 
-export default Login;
+export default SignUp;
