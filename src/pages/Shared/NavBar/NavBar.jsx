@@ -54,7 +54,7 @@ const NavBar = () => {
                 </div>
 
                 {/* daisyUI button */}
-                <a className="btn btn-ghost text-xl">Elite Car Doctor</a>
+                <a className="btn btn-ghost text-xl italic">Elite Car Doctor</a>
             </div>
 
             <div className="navbar-center hidden lg:flex">
