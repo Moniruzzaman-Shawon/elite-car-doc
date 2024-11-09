@@ -1,16 +1,15 @@
-// Import the functions you need from the SDKs you need
-import { initializeApp } from "firebase/app";
-// TODO: Add SDKs for Firebase products that you want to use
-// https://firebase.google.com/docs/web/setup#available-libraries
+// src/firebase/firebase.config.js
 
-// Your web app's Firebase configuration
+import { initializeApp } from "firebase/app";
+
+// Your Firebase configuration object
 const firebaseConfig = {
-    apiKey: import.meta.env.vite_apiKey,
-    authDomain: import.meta.env.vite_authDomain,
-    projectId: import.meta.env.vite_projectId,
-    storageBucket: import.meta.env.vite_storageBucket,
-    messagingSenderId: import.meta.env.vite_messagingSenderId,
-    appId: import.meta.env.vite_appId
+    apiKey: "AIzaSyCjplbigHCVAsDJctJFvZ6k8UgbFALWsxw",
+    authDomain: "cars-doctor-fb00a.firebaseapp.com",
+    projectId: "cars-doctor-fb00a",
+    storageBucket: "cars-doctor-fb00a.firebasestorage.app",
+    messagingSenderId: "609905919730",
+    appId: "1:609905919730:web:3af17e1ae10bf1927b326b"
 };
 
 // Initialize Firebase
